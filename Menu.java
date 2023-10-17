@@ -21,6 +21,8 @@ public class Menu {
             System.out.println("1. Skapa konto");
             System.out.println("2. Administrera konto");
             System.out.println("3. Avsluta");
+
+            System.out.print("Ange menyal> ");
             selection = scanner.nextInt();
 
             switch (selection) {
@@ -29,6 +31,8 @@ public class Menu {
                     break;
 
                 case 2:
+                    registerAccount.manageAccount();
+                    break;
 
                 case 3:
                     System.out.println("Du lämnar nu banken. Välkommen åter!");
