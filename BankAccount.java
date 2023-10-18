@@ -27,6 +27,10 @@ public class BankAccount {
         this.balance = balance + depositAmount;
     }
 
+    public void balance() {
+        System.out.println("Ditt saldo är " + balance);
+    }
+
     public String toString() {
         return "Account number is: " + this.accountNumber;
     }

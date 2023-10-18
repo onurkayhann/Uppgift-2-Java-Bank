@@ -77,7 +77,7 @@ public class Register {
                             break;
 
                         case 3:
-                            System.out.println("Du vill se saldot");
+                            listOfAccounts.get(i).balance();
                             break;
 
                         case 4:
