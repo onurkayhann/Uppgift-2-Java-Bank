@@ -78,6 +78,7 @@ public class Register {
 
                         case 3:
                             listOfAccounts.get(i).balance();
+                            secondMenu = true;
                             break;
 
                         case 4:

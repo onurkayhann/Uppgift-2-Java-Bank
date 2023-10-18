@@ -16,9 +16,10 @@ public class BankAccount {
         if (balance <= 0)
             System.out.println("Du har inte tillräckligt med pengar.");
 
-        else
+        else {
             System.out.println("Du lyckades att ta ut " + amount + "kr.");
-        this.balance -= amount;
+            this.balance -= amount;
+        }
 
     }
 
