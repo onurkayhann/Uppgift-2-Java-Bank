@@ -21,7 +21,6 @@ public class Register {
 
         // Show all accounts --> for the teacher to debug, shows the array
         for (BankAccount account : listOfAccounts) {
-            System.out.println(account.toString());
 
             if (accountNumber == account.getAccountNumber()) {
                 isExist = true;
@@ -30,12 +29,20 @@ public class Register {
         }
 
         if (!isExist) {
-            System.out.println("Kontot skapades, grattis!");
+
             listOfAccounts.add(new BankAccount(accountNumber, 0));
+            // Den visar alltid nya accounts, men avsluta knappen måste man trycka två
+            // gånger på.
+            BankAccount newAccount = new BankAccount(accountNumber, 0);
+
+            System.out.println(newAccount.toString()); // Display the new account details
             isExist = false; // kan också vara false - diskuterar sen med läraren
+
         } else {
+
             System.out.println("Kontot existerar redan, försök igen: ");
             isExist = true;
+
         }
 
     }
@@ -49,7 +56,6 @@ public class Register {
         for (int i = 0; i < listOfAccounts.size(); i++) {
 
             if (checkAccount == listOfAccounts.get(i).getAccountNumber()) {
-                System.out.println("Kontot exsiterar!!!!");
                 isAccount = true;
 
                 do {

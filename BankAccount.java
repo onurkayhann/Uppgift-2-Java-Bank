@@ -33,6 +33,6 @@ public class BankAccount {
     }
 
     public String toString() {
-        return "Account number is: " + this.accountNumber;
+        return "Kontonumret " + this.accountNumber + " skapades nu";
     }
 }
