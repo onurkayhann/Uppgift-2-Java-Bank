@@ -11,15 +11,17 @@ public class Register {
     private boolean secondMenu;
     private boolean isExist;
 
+    // skapar min array
     ArrayList<BankAccount> listOfAccounts = new ArrayList<>();
 
+    // i addAccount metoden skapar användaren ett konto
     public void addAccount() {
         isExist = false;
 
         System.out.print("Ange kontonummer> ");
         accountNumber = scanner.nextInt();
 
-        // Show all accounts --> for the teacher to debug, shows the array
+        
         for (BankAccount account : listOfAccounts) {
 
             if (accountNumber == account.getAccountNumber()) {
@@ -31,12 +33,13 @@ public class Register {
         if (!isExist) {
 
             listOfAccounts.add(new BankAccount(accountNumber, 0));
-            // Den visar alltid nya accounts, men avsluta knappen måste man trycka två
-            // gånger på.
-            BankAccount newAccount = new BankAccount(accountNumber, 0);
 
-            System.out.println(newAccount.toString()); // Display the new account details
-            isExist = false; // kan också vara false - diskuterar sen med läraren
+            // Show all accounts --> for the teacher to debug, shows the array
+            // Det här är för att visa varje gång nytt konto skapas
+            BankAccount newAccount = new BankAccount(accountNumber, 0);
+            System.out.println(newAccount.toString()); // Visar nya kontot som skapas
+
+            isExist = false;
 
         } else {
 
@@ -47,12 +50,16 @@ public class Register {
 
     }
 
+    // Här kollar manageAccount metoden om användaren anger rätt konto nummer --> beviljas inlogg
+    // om det är fel inlogg --> inlogg nekas
     public void manageAccount() {
+
         System.out.print("Ange kontonummer> ");
         checkAccount = scanner.nextInt();
 
         isAccount = false;
 
+        // om inlogg beviljas --> ny meny kommer upp + befintlig konto nummer syns
         for (int i = 0; i < listOfAccounts.size(); i++) {
 
             if (checkAccount == listOfAccounts.get(i).getAccountNumber()) {

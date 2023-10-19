@@ -6,8 +6,8 @@ public class Menu {
     private Register registerAccount = new Register();
 
     // instansvariabler
-    boolean runMenu = true;
-    int selection;
+    private boolean runMenu = true;
+    private int selection;
 
     public Menu() {
         startMenu();
@@ -35,7 +35,7 @@ public class Menu {
                     break;
 
                 case 3:
-                    System.out.println("Du lämnar nu banken. Välkommen åter!");
+                    System.out.println("Du lämnar banken. Välkommen åter!");
                     runMenu = false;
                     break;
 

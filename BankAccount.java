@@ -1,4 +1,6 @@
 public class BankAccount {
+
+    // instansvariabler
     private int accountNumber;
     private double balance;
 
