@@ -19,7 +19,8 @@ public class Register {
         isExist = false;
 
         System.out.print("Ange kontonummer> ");
-        accountNumber = scanner.nextInt();
+        accountNumber = scanner.nextInt(); 
+
 
         
         for (BankAccount account : listOfAccounts) {
@@ -59,7 +60,7 @@ public class Register {
 
         isAccount = false;
 
-        // om inlogg beviljas --> ny meny kommer upp + befintlig konto nummer syns
+        // om inlogg beviljas --> ny meny kommer upp + befintlig kontonummer syns
         for (int i = 0; i < listOfAccounts.size(); i++) {
 
             if (checkAccount == listOfAccounts.get(i).getAccountNumber()) {
