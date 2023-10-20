@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class Register {
 
     // instansvariabler
-    private Scanner scanner = new Scanner(System.in);
     private int accountNumber;
-    private boolean isAccount;
     private int checkAccount;
+    private boolean isAccount;
     private boolean secondMenu;
     private boolean isExist;
+
+    private Scanner scanner = new Scanner(System.in);
 
     // skapar min array
     ArrayList<BankAccount> listOfAccounts = new ArrayList<>();
