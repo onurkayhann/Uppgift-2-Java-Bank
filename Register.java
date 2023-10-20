@@ -19,10 +19,8 @@ public class Register {
         isExist = false;
 
         System.out.print("Ange kontonummer> ");
-        accountNumber = scanner.nextInt(); 
+        accountNumber = scanner.nextInt();
 
-
-        
         for (BankAccount account : listOfAccounts) {
 
             if (accountNumber == account.getAccountNumber()) {
@@ -35,7 +33,7 @@ public class Register {
 
             listOfAccounts.add(new BankAccount(accountNumber, 0));
 
-            // Show all accounts --> for the teacher to debug, shows the array
+            // Visa alla konton --> för läraren att kunna se, visar array
             // Det här är för att visa varje gång nytt konto skapas
             BankAccount newAccount = new BankAccount(accountNumber, 0);
             System.out.println(newAccount.toString()); // Visar nya kontot som skapas
@@ -51,7 +49,8 @@ public class Register {
 
     }
 
-    // Här kollar manageAccount metoden om användaren anger rätt konto nummer --> beviljas inlogg
+    // Här kollar manageAccount metoden om användaren anger rätt konto nummer -->
+    // beviljas inlogg
     // om det är fel inlogg --> inlogg nekas
     public void manageAccount() {
 
@@ -112,8 +111,11 @@ public class Register {
 
         }
 
+        // logik om en användare försöker logga in med något som inte finns
+        // if ligger utanför i och med att den annars körs i varje fall
+        // om den ej ligger utanför
+
         if (!isAccount)
             System.out.println("Kontot du angett finns inte. Försök igen:");
-
     }
 }
