@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private Scanner scanner = new Scanner(System.in);
-    private Register registerAccount = new Register();
-
     // instansvariabler
-    private boolean runMenu = true;
+    private boolean runMenu;
     private int selection;
+
+    private Scanner scanner = new Scanner(System.in);
+
+    private Register registerAccount = new Register();
 
     public Menu() {
         startMenu();
@@ -28,10 +29,12 @@ public class Menu {
             switch (selection) {
                 case 1:
                     registerAccount.addAccount();
+                    runMenu = true;
                     break;
 
                 case 2:
                     registerAccount.manageAccount();
+                    runMenu = true;
                     break;
 
                 case 3:
