@@ -6,6 +6,7 @@ public class Register {
     // instansvariabler
     private int accountNumber;
     private int checkAccount;
+    private int userChoice;
     private boolean isAccount;
     private boolean secondMenu;
     private boolean isExist;
@@ -73,7 +74,7 @@ public class Register {
                     System.out.println("3. Visa saldo");
                     System.out.println("4. Avsluta");
                     System.out.print("Ange menyval> ");
-                    int userChoice = scanner.nextInt();
+                    userChoice = scanner.nextInt();
 
                     switch (userChoice) {
                         case 1:
