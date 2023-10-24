@@ -14,7 +14,7 @@ public class Register {
     private Scanner scanner = new Scanner(System.in);
 
     // skapar min array
-    ArrayList<BankAccount> listOfAccounts = new ArrayList<>();
+    private ArrayList<BankAccount> listOfAccounts = new ArrayList<>();
 
     // i addAccount metoden skapar användaren ett konto
     public void addAccount() {
